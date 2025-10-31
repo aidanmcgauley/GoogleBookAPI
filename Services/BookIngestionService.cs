@@ -1,5 +1,5 @@
 ﻿using GoogleBookAPI.Data;
-using GoogleBookAPI.Models;
+using GoogleBookAPI.Models.Entities;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 

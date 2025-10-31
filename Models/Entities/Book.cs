@@ -1,4 +1,4 @@
-﻿namespace GoogleBookAPI.Models
+﻿namespace GoogleBookAPI.Models.Entities
 {
     public class Book
     {
