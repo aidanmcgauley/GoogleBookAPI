@@ -2,6 +2,8 @@ using GoogleBookAPI.Data;
 using GoogleBookAPI.Repositories;
 using GoogleBookAPI.Services;
 using Microsoft.EntityFrameworkCore;
+using AutoMapper;
+using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +18,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddHttpClient<BookIngestionService>(); // registers IHttpClientFactory
 builder.Services.AddScoped<BookIngestionService>();
 builder.Services.AddScoped<IBookRepository, BookRepository>();
+builder.Services.AddAutoMapper(cfg => cfg.AddProfile<MappingProfile>());
 builder.Services.AddDbContext<BookDbContext>(options
     => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 

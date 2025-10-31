@@ -16,7 +16,7 @@
         public string? MaturityRating { get; set; }
 
         public List<AuthorDTO> Authors { get; set; } = new();
-        public List<ManagerCategoryDTO> Categories { get; set; } = new();
-        public List<ManagerIndustryIdentifierDTO> IndustryIdentifiers { get; set; } = new();
+        public List<CategoryDTO> Categories { get; set; } = new();
+        public List<IndustryIdentifierDTO> IndustryIdentifiers { get; set; } = new();
     }
 }
